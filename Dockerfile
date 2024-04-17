@@ -1,11 +1,13 @@
 # Stage 1: Build the React app
 FROM node:16-alpine as build-stage
 
-# Install dependencies
-RUN npm install
+
 
 # Copy the rest of the application code
 COPY . .
+
+# Install dependencies
+RUN npm install
 
 # Build the React app
 RUN npm run build
