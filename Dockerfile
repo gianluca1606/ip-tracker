@@ -7,7 +7,7 @@ FROM node:16-alpine as build-stage
 COPY . .
 
 # Install dependencies
-RUN npm install
+RUN npm install --force
 
 # Build the React app
 RUN npm run build
